@@ -33,35 +33,18 @@
 
 
 
-import React, {useState} from 'react'
+import React from 'react'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header'
+import TaskList from './components/TaskList'
 
 const App = () => {
-const [tasks, setTasks] = useState(
-      [
-        { id: 1, name: "Ram", completed: true },
-        { id: 2, name: "Edit React", completed: false },
-        { id: 3, name: "Watch Video", completed: true }
-      ]
-    )
-  
-    const [show, setShow] = useState(true);
 
-    const Delete = (id) => {
-      setTasks(tasks.filter( task => task.id !== id ))
-    }
-    
     return (
       <div className='App'>
-        <h2>Task List</h2>
-        <button onClick={() => setShow(!show)}>Toggle</button>
-        <ul>
-          {show && tasks.map( (item) => (
-            <li key={item.id} className={tasks.completed ? 'completed' : 'incompleted'}> {item.id} - {item.name} 
-            <button onClick={() => Delete(item.id)}>Delete</button>
-            </li>
-          ) )}
-        </ul>
+        <Header />
+        <TaskList randomValue = "random" />
       </div>
     )
 }
