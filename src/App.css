@@ -2,41 +2,75 @@
 
 
 *{
-  font-family: "Madimi One", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Creepster", system-ui;
+  /* font-family: "Madimi One", sans-serif; */
+  /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, 
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
+    /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
 }
 
-.todo{
-  text-align: center;
+.Show{
+  font-family: "Creepster", system-ui  !important;
+  border-radius: 50px;
+  background-color:  rgb(32, 1, 73);
+  color:white;
+  padding: 5px 20px;
 }
 
 .toggle{
   text-align: center;
 }
 
+.list-center{
+  margin-top: 30px;
+  width: 1000px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, 
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  padding:15px;
+}
+
+.list{
+  list-style-type: none;
+  padding: 0;
+}
+
 .box{
-  margin: 50px;
+  margin: 30px 30px 20px 30px;
   width: 500px;
   padding:10px;
-  border: 2px solid green;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .completed {
-  margin:10px;
-  border: 2px solid green;
+  border: 1px solid rgb(73, 246, 73);
 }
 
 .incompleted {
-  margin:10px;
-  border: 2px solid red;
+  border: 1px solid rgb(253, 55, 55);
 }
 
 .hidden{
   display: none;
 }
 
+.success{
+  background-color: rgba(81, 183, 3, 0.732);
+}
+
+.warning{
+  background-color: rgba(174, 183, 3, 0.927);
+}
+
+.alerter{
+  background-color: rgba(198, 241, 7, 0.73) !important;
+}
+
+
 .title{
   font-size: 20px;
-  color:white;
+  font-weight: bold;
   font-family: "Angkor", serif;
   /* font-family: "Creepster", system-ui; */
 }

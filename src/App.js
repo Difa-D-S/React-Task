@@ -33,18 +33,33 @@
 
 
 
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header'
 import TaskList from './components/TaskList'
+import Footer from './components/Footer'
+import { AddTask } from './components/AddTask';
+
 
 const App = () => {
+
+  const [tasks, setTasks] = useState(
+    [
+      { id: 14533, name: "Ram", completed: false },
+      { id: 23452, name: "Edit React", completed: false },
+      { id: 33745, name: "Watch Video", completed: true }
+    ]
+  )
 
     return (
       <div className='App'>
         <Header />
-        <TaskList randomValue = "random" />
+        <main>
+          <AddTask tasks={tasks} setTasks={setTasks} />
+          <TaskList tasks={tasks} setTasks={setTasks} />
+        </main>
+        <Footer />
       </div>
     )
 }

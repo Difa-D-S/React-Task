@@ -17,11 +17,15 @@ const BoxCard = ({children, result}) => {         // Destructuring object
     const [show, setShow] = useState(true);
 
     return (
-      <div className={show ? "" : "hidden"}>
+      <div style={{display:"flex", justifyContent:"center"}}>
+        <div className={show ? "" : "hidden"}>
           <div className={`box ${result}`}>
               {show && children}
           </div>
-          <button onClick={() => (setShow(!show))}>Hide</button>
+          <div className='toggle'>
+            <button onClick={() => (setShow(!show))} className='Show'>Hide</button>
+          </div>
+        </div>
       </div>
     )
   }
