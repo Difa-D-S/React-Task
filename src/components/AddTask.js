@@ -10,6 +10,8 @@ export const AddTask = ({tasks, setTasks}) => {
     //     setTaskValue(event.target.value)
     // }
 
+    const [show, setShow] = useState(true)
+
     const [progress, setProgress] = useState(false)
 
     const handleSubmit = (event) => {
@@ -23,6 +25,7 @@ export const AddTask = ({tasks, setTasks}) => {
         // console.log(typeof (Boolean(progress)));
         console.log(task);
         setTasks([...tasks, task])
+        setShow(true);
         handleReset()
     }
 
@@ -33,16 +36,21 @@ export const AddTask = ({tasks, setTasks}) => {
 
   return (
     <section className='addtask'>
-        <form onSubmit={handleSubmit}>
-            <input onChange={(event) => {setTaskValue(event.target.value)}} type='text' placeholder='Add Task' name='task' id='task' value={taskValue} autoComplete='off'></input>
-            <select onChange={(event) => {setProgress(event.target.value)}} value={progress}>
-                <option value={false}>Pending</option>
-                <option value={true}>completed</option>
-            </select>
-            <button type="submit">Add Task</button>
-            <button onClick={handleReset}>Reset</button>
-        </form>
-        <p>{taskValue}</p>
+        <div className={show ? "" : "hidden"}>
+          <button onClick={() => setShow(!show)} className="Show"> Add </button>
+        </div> 
+           {!show && <div className='form'>
+            <form >
+                <input className="form-design me-2" onChange={(event) => {setTaskValue(event.target.value)}} type='text' placeholder='Add Task' name='task' id='task' value={taskValue} autoComplete='off'></input>
+                <select className="form-design me-2" onChange={(event) => {setProgress(event.target.value)}} value={progress}>
+                    <option value={false}>Pending</option>
+                    <option value={true}>completed</option>
+                </select>
+               <button type="submit" className="form-design me-2" onClick={handleSubmit}>Add Task</button>
+            </form>
+            <button onClick={handleReset} className="form-design">Reset</button>
+            </div> }
+        {/* <p>{taskValue}</p> */}
     </section>
     
   )

@@ -19,6 +19,18 @@
   padding: 5px 20px;
 }
 
+.form{
+  display: flex;
+}
+
+.form-design{
+  font-family: "Creepster", system-ui  !important;
+  border-radius: 5px;
+  background-color:  rgb(32, 1, 73);
+  color:white;
+  padding: 5px 20px;
+}
+
 .toggle{
   text-align: center;
 }

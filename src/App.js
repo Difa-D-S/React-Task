@@ -39,7 +39,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header'
 import TaskList from './components/TaskList'
 import Footer from './components/Footer'
-import { AddTask } from './components/AddTask';
+// import { AddTask } from './components/AddTask';
 
 
 const App = () => {
@@ -56,7 +56,7 @@ const App = () => {
       <div className='App'>
         <Header />
         <main>
-          <AddTask tasks={tasks} setTasks={setTasks} />
+          {/* <AddTask tasks={tasks} setTasks={setTasks} /> */}
           <TaskList tasks={tasks} setTasks={setTasks} />
         </main>
         <Footer />

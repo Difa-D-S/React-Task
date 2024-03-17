@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import TaskCard from './TaskCard';
 import BoxCard from './BoxCard';
+import { AddTask } from './AddTask';
 
 
 const TaskList = ({tasks, setTasks}) => {
@@ -28,7 +29,8 @@ const TaskList = ({tasks, setTasks}) => {
         </div> 
        
         <div style={{display:"flex", justifyContent:"center"}}>
-          <div className='list-center'>
+          <div className='list-center'>          
+            <AddTask tasks={tasks} setTasks={setTasks}/>
             <ul className='list'>
               {show && tasks.map( (item) => (
                 <TaskCard task={item} handleEvent={Delete}/>
