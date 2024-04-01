@@ -37,8 +37,9 @@ import React, { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header'
-import TaskList from './components/TaskList'
+import TaskList from './components/TaskLisst'
 import Footer from './components/Footer'
+// import UseReducer from './components/UseReducer';
 // import { AddTask } from './components/AddTask';
 
 
@@ -58,6 +59,8 @@ const App = () => {
         <main>
           {/* <AddTask tasks={tasks} setTasks={setTasks} /> */}
           <TaskList tasks={tasks} setTasks={setTasks} />
+
+          {/* <UseReducer/> */}
         </main>
         <Footer />
       </div>
